@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. fejezet / Jegyvásárlás</title>
+</head>
+<body>
+    <script>
+    var quantity =  prompt("Jegyek száma:");   // az oldal betöltése után felugró ablak (oldal közlendője), amiben a user-től bekérjük az input adatot
+    var type = prompt ("Jegyek típusa:(diák /felnőtt/ nyugdíjas)");
+    console.log(quantity);
+    console.log(type);
+
+      var types = {
+          diák : 300,
+          felnőtt : 350,
+          nyugdíjas : 250
+      };
+
+    // var price = type === "diák" ?  300 : 350;  // ez addig volt érvényes, amíg csak két ípus közzül lehetett választani.
+       var price = types [type];    
+       var kedvezmeny = quantity > 10 ? 0.9 : 1;
+       var total = quantity * price * kedvezmeny
+
+
+    alert(total);   // itt szintén az oldal közlendője ugrik fel.
+
+    // diákjegy : 300 
+    // felnőttjegy : 350
+    // nyugdíjas : 250
+    // 10 feletti jegyvásárlás után 10 % kedvezmény
+    </script>
+</body>
+</html>
